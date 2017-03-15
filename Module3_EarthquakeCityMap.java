@@ -50,8 +50,8 @@ public class EarthquakeCityMap extends PApplet {
 	private String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
 	
 	public final int blue = color(0, 0, 255);
-    public final int yellow =  color(255, 255, 0);
-    public final int red = color(255, 0, 0);
+    	public final int yellow =  color(255, 255, 0);
+    	public final int red = color(255, 0, 0);
 
 	
 	public void setup() {
@@ -114,24 +114,24 @@ public class EarthquakeCityMap extends PApplet {
 		int rad;
 		SimplePointMarker marker = new SimplePointMarker(feature.getLocation());
 		Object magObj = feature.getProperty("magnitude");
-    	float mag = Float.parseFloat(magObj.toString());
+    		float mag = Float.parseFloat(magObj.toString());
     	
-    	if(mag < 4.0) {
-    		col = blue;
-    		rad = 5;
-    	}
-    	else if(mag >= 4.0 && mag < 4.9) {
-    		col = yellow;
-    		rad = 10;
-    	}
-    	else {
-    		col = red;
-    		rad = 25;
-    	}
+    		if(mag < 4.0) {
+    			col = blue;
+    			rad = 5;
+    		}
+    		else if(mag >= 4.0 && mag < 4.9) {
+    			col = yellow;
+    			rad = 10;
+    		}
+    		else {
+    			col = red;
+    			rad = 25;
+    		}
     	
-    	marker.setColor(col);
-    	marker.setStrokeColor(col);
-    	marker.setRadius(rad);
+    		marker.setColor(col);
+    		marker.setStrokeColor(col);
+    		marker.setRadius(rad);
     	
 		return marker;
 	}
